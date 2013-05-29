@@ -1,6 +1,6 @@
 package com.lang2619.sot.item;
 
-import java.awt.List;
+import java.util.List;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -30,21 +30,20 @@ public class DuskStone extends ItemGeneral
         }
     }
 
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer,  List par3List, boolean par4)
     {
-
         if(ConfigurationHandler.doAdditionalInfo())
         {
-            String message = "Dusk stone, Turns Time to Dusk.";
+            String message = "Turns time to Dusk.";
             message = Utils.wrapMultipleFormatTags(message, Utils.FormatCodes.Grey, Utils.FormatCodes.Italic);
             par3List.add(message);
         }
         else
         {
-            par3List.add(ConfigurationHandler.additionalInfoInstructions());
+            par3List.add("Turns time to Dusk.");
+            //par3List.add(ConfigurationHandler.additionalInfoInstructions());
         }
-
     }
-
 }

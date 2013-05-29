@@ -1,6 +1,6 @@
 package com.lang2619.sot.item;
 
-import java.awt.List;
+import java.util.List;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,5 +28,6 @@ public class ItemGeneral extends Item
         return this.maxStackSize;
     }
 
+    @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4){}
 }
