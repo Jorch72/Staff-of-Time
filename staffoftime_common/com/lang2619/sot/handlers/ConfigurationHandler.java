@@ -3,11 +3,16 @@ package com.lang2619.sot.handlers;
 import java.io.File;
 import java.util.logging.Level;
 
+import org.lwjgl.input.Keyboard;
+
 import com.lang2619.sot.lib.ItemID;
 import com.lang2619.sot.lib.Reference;
 import com.lang2619.sot.lib.Strings;
+import com.lang2619.sot.lib.Utils;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraftforge.common.Configuration;
 
 public class ConfigurationHandler
@@ -26,7 +31,6 @@ public class ConfigurationHandler
             //Blocks
             
             //ITEMS
-            
             ItemID.DUSKPOWDER = configuration.getItem(Strings.DUSK_POWDER, ItemID.DUSKPOWDER_DEFAULT).getInt(ItemID.DUSKPOWDER_DEFAULT);
             ItemID.DUSKFRAGMENT = configuration.getItem(Strings.DUSK_FRAGMENT, ItemID.DUSKFRAGMENT_DEFAULT).getInt(ItemID.DUSKFRAGMENT_DEFAULT);
             ItemID.DUSKSTONE = configuration.getItem(Strings.DUSK_STONE, ItemID.DUSKSTONE_DEFAULT).getInt(ItemID.DUSKSTONE_DEFAULT);
@@ -60,5 +64,22 @@ public class ConfigurationHandler
             }
         }
         configuration.save();
+    }
+
+    public static boolean doAdditionalInfo()
+    {
+        if(FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+            if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static String additionalInfoInstructions()
+    {
+        String message = "Press SHIFT for more information.";
+        message = Utils.wrapMultipleFormatTags(message, Utils.FormatCodes.Grey, Utils.FormatCodes.Italic);
+        return message;
     }
 }

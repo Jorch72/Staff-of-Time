@@ -6,6 +6,7 @@ public class DualStaff extends ItemGeneral
     public DualStaff(int id)
     {
         super(id);
+        this.maxStackSize = 1;
     }
 
 }

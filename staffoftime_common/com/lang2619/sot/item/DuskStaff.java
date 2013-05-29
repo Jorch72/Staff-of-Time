@@ -6,6 +6,7 @@ public class DuskStaff extends ItemGeneral
     public DuskStaff(int id)
     {
         super(id);
+        this.maxStackSize = 1;
     }
 
 }

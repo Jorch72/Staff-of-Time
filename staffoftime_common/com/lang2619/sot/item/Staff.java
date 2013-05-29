@@ -5,7 +5,7 @@ public class Staff extends ItemGeneral
     public Staff(int id)
     {
         super(id);
-        // TODO Auto-generated constructor stub
+        this.maxStackSize = 1;
     }
 
 }

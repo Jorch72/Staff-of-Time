@@ -25,15 +25,15 @@ public class ModItems
     
     public static void init()
     {
-        duskPowder = new Item(ItemID.DUSKPOWDER).setUnlocalizedName("duskPowder");
-        duskFragment = new Item(ItemID.DUSKFRAGMENT).setUnlocalizedName("duskFragment");
+        duskPowder = new General(ItemID.DUSKPOWDER).setUnlocalizedName("duskPowder");
+        duskFragment = new General(ItemID.DUSKFRAGMENT).setUnlocalizedName("duskFragment");
         duskStone = new DuskStone(ItemID.DUSKSTONE).setUnlocalizedName("duskStone");
-        dawnPowder = new Item(ItemID.DAWNPOWDER).setUnlocalizedName("dawnPowder");
-        dawnFragment = new Item(ItemID.DAWNFRAGMENT).setUnlocalizedName("dawnFragment");
+        dawnPowder = new General(ItemID.DAWNPOWDER).setUnlocalizedName("dawnPowder");
+        dawnFragment = new General(ItemID.DAWNFRAGMENT).setUnlocalizedName("dawnFragment");
         dawnStone = new DawnStone(ItemID.DAWNSTONE).setUnlocalizedName("dawnStone");
-        headStaff = new Item(ItemID.HEADSTAFF).setUnlocalizedName("headStaff");
-        bodyStaff = new Item(ItemID.BODYSTAFF).setUnlocalizedName("bodyStaff");
-        bottomStaff = new Item(ItemID.BOTTOMSTAFF).setUnlocalizedName("bottomStaff");
+        headStaff = new General(ItemID.HEADSTAFF).setUnlocalizedName("headStaff");
+        bodyStaff = new General(ItemID.BODYSTAFF).setUnlocalizedName("bodyStaff");
+        bottomStaff = new General(ItemID.BOTTOMSTAFF).setUnlocalizedName("bottomStaff");
         neutralStaff = new Staff(ItemID.NEUTRALSTAFF).setUnlocalizedName("neutralStaff");
         duskStaff = new DuskStaff(ItemID.DUSKSTAFF).setUnlocalizedName("duskStaff");
         dawnStaff = new DawnStaff(ItemID.DAWNSTAFF).setUnlocalizedName("dawnStaff");
