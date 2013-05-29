@@ -18,18 +18,18 @@ import net.minecraftforge.common.Configuration;
 public class ConfigurationHandler
 {
     public static Configuration configuration;
-    
+
     public static final String CATEGORY_BLOCK_PROPERTIES = Configuration.CATEGORY_BLOCK + Configuration.CATEGORY_SPLITTER + "properties";
-    
+
     public static void init(File configFile)
     {
         configuration = new Configuration(configFile);
-        
+
         try{
             configuration.load();
-            
+
             //Blocks
-            
+
             //ITEMS
             ItemID.DUSKPOWDER = configuration.getItem(Strings.DUSK_POWDER, ItemID.DUSKPOWDER_DEFAULT).getInt(ItemID.DUSKPOWDER_DEFAULT);
             ItemID.DUSKFRAGMENT = configuration.getItem(Strings.DUSK_FRAGMENT, ItemID.DUSKFRAGMENT_DEFAULT).getInt(ItemID.DUSKFRAGMENT_DEFAULT);
@@ -54,7 +54,7 @@ public class ConfigurationHandler
             configuration.save();
         }
     }
-    
+
     public static void set(String categoryName, String propertyName, String newValue)
     {
         configuration.load();

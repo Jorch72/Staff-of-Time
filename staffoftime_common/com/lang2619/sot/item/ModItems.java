@@ -22,7 +22,7 @@ public class ModItems
     public static Item dawnStaff;
     public static Item dualStaff;
     public static Item timeEssence;
-    
+
     public static void init()
     {
         duskPowder = new General(ItemID.DUSKPOWDER).setUnlocalizedName("duskPowder");
@@ -39,7 +39,7 @@ public class ModItems
         dawnStaff = new DawnStaff(ItemID.DAWNSTAFF).setUnlocalizedName("dawnStaff");
         dualStaff = new DualStaff(ItemID.DUALSTAFF).setUnlocalizedName("dualStaff");
         timeEssence = new Essence(ItemID.TIMEESSENCE).setUnlocalizedName("timeEssence");
-        
+
         LanguageRegistry.addName(duskPowder, "Dusk Powder");
         LanguageRegistry.addName(duskFragment, "Dusk Fragment");
         LanguageRegistry.addName(duskStone, "Dusk Stone");

@@ -24,20 +24,20 @@ public class StaffofTime
     @PreInit
     public void preInit(FMLPreInitializationEvent event)
     {
-        ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsoluteFile() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
+        ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsoluteFile() + File.separator + "Staff of Time" + ".cfg"));
         ModItems.init();
     }
-    
+
     @Init
     public void init(FMLInitializationEvent event)
     {
         CraftingRecipes.init();
         SmeltingRecipes.init();
     }
-    
+
     @PostInit
     public void postInit(FMLPostInitializationEvent event)
     {
-        
+
     }
 }

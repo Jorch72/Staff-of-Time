@@ -11,19 +11,15 @@ import com.lang2619.sot.lib.Utils;
 
 public class DuskStone extends ItemGeneral
 {
-    
+
     public DuskStone(int id)
     {
         super(id);
     }
-    
+
     public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
         if(par3EntityPlayer.capabilities.isCreativeMode)
-        {
-            return par1ItemStack;
-        }
-        else if(par3EntityPlayer.ridingEntity != null)
         {
             return par1ItemStack;
         }
@@ -33,13 +29,14 @@ public class DuskStone extends ItemGeneral
             return par1ItemStack;
         }
     }
-    
+
     @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
     {
+
         if(ConfigurationHandler.doAdditionalInfo())
         {
-            String message = "Dusk stone, Turns time to Dusk.";
+            String message = "Dusk stone, Turns Time to Dusk.";
             message = Utils.wrapMultipleFormatTags(message, Utils.FormatCodes.Grey, Utils.FormatCodes.Italic);
             par3List.add(message);
         }
@@ -47,7 +44,7 @@ public class DuskStone extends ItemGeneral
         {
             par3List.add(ConfigurationHandler.additionalInfoInstructions());
         }
-        
+
     }
-   
+
 }

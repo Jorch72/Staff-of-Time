@@ -22,7 +22,7 @@ public class ItemGeneral extends Item
     {
         this.itemIcon = par1IconRegister.registerIcon(Reference.MOD_ID + ":" + (this.getUnlocalizedName().substring(5)));
     }
-    
+
     public int getItemStackLimit()
     {
         return this.maxStackSize;

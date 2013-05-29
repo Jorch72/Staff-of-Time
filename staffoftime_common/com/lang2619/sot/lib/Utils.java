@@ -6,12 +6,12 @@ public class Utils
     {
         return "\u00a7" + format + str;
     }
-    
+
     public static String appendResetTag(String str)
     {
         return str + "\u00a7r";
     }
-    
+
     public static String wrapMultipleFormatTags(String str, Object... tags)
     {
         for(Object tag : tags){
@@ -23,9 +23,9 @@ public class Utils
             }
         }
         return appendResetTag(str);
-        
+
     }
-    
+
     public static enum FormatCodes 
     {
         Black('0'),
@@ -50,9 +50,9 @@ public class Utils
         Underlined('n'),
         Italic('o'),
         Reset('r');
-        
+
         public char character;
-        
+
         private FormatCodes(char character){
             this.character = character;
         }
