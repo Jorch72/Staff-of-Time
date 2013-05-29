@@ -25,19 +25,19 @@ public class ModItems
     
     public static void init()
     {
-        duskPowder = new Powder(ItemID.DUSKPOWDER).setUnlocalizedName("duskPowder");
-        duskFragment = new Fragment(ItemID.DUSKFRAGMENT).setUnlocalizedName("duskFragment");
-        duskStone = new Stone(ItemID.DUSKSTONE).setUnlocalizedName("duskStone");
-        dawnPowder = new Powder(ItemID.DAWNPOWDER).setUnlocalizedName("dawnPowder");
-        dawnFragment = new Fragment(ItemID.DAWNFRAGMENT).setUnlocalizedName("dawnFragment");
-        dawnStone = new Stone(ItemID.DAWNSTONE).setUnlocalizedName("dawnStone");
-        headStaff = new StaffPart(ItemID.HEADSTAFF).setUnlocalizedName("headStaff");
-        bodyStaff = new StaffPart(ItemID.BODYSTAFF).setUnlocalizedName("bodyStaff");
-        bottomStaff = new StaffPart(ItemID.BOTTOMSTAFF).setUnlocalizedName("bottomStaff");
+        duskPowder = new Item(ItemID.DUSKPOWDER).setUnlocalizedName("duskPowder");
+        duskFragment = new Item(ItemID.DUSKFRAGMENT).setUnlocalizedName("duskFragment");
+        duskStone = new DuskStone(ItemID.DUSKSTONE).setUnlocalizedName("duskStone");
+        dawnPowder = new Item(ItemID.DAWNPOWDER).setUnlocalizedName("dawnPowder");
+        dawnFragment = new Item(ItemID.DAWNFRAGMENT).setUnlocalizedName("dawnFragment");
+        dawnStone = new DawnStone(ItemID.DAWNSTONE).setUnlocalizedName("dawnStone");
+        headStaff = new Item(ItemID.HEADSTAFF).setUnlocalizedName("headStaff");
+        bodyStaff = new Item(ItemID.BODYSTAFF).setUnlocalizedName("bodyStaff");
+        bottomStaff = new Item(ItemID.BOTTOMSTAFF).setUnlocalizedName("bottomStaff");
         neutralStaff = new Staff(ItemID.NEUTRALSTAFF).setUnlocalizedName("neutralStaff");
-        duskStaff = new Staff(ItemID.DUSKSTAFF).setUnlocalizedName("duskStaff");
-        dawnStaff = new Staff(ItemID.DAWNSTAFF).setUnlocalizedName("dawnStaff");
-        dualStaff = new Staff(ItemID.DUALSTAFF).setUnlocalizedName("dualStaff");
+        duskStaff = new DuskStaff(ItemID.DUSKSTAFF).setUnlocalizedName("duskStaff");
+        dawnStaff = new DawnStaff(ItemID.DAWNSTAFF).setUnlocalizedName("dawnStaff");
+        dualStaff = new DualStaff(ItemID.DUALSTAFF).setUnlocalizedName("dualStaff");
         timeEssence = new Essence(ItemID.TIMEESSENCE).setUnlocalizedName("timeEssence");
         
         LanguageRegistry.addName(duskPowder, "Dusk Powder");
