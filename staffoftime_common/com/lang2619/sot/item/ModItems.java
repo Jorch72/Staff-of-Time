@@ -22,15 +22,16 @@ public class ModItems
     public static Item dawnStaff;
     public static Item dualStaff;
     public static Item timeEssence;
+    public static Item sunStone;
+    public static Item rainStone;
+    public static Item thunderStone;
 
     public static void init()
     {
         duskPowder = new General(ItemID.DUSKPOWDER).setUnlocalizedName("duskPowder");
         duskFragment = new General(ItemID.DUSKFRAGMENT).setUnlocalizedName("duskFragment");
-        duskStone = new DuskStone(ItemID.DUSKSTONE).setUnlocalizedName("duskStone");
         dawnPowder = new General(ItemID.DAWNPOWDER).setUnlocalizedName("dawnPowder");
         dawnFragment = new General(ItemID.DAWNFRAGMENT).setUnlocalizedName("dawnFragment");
-        dawnStone = new DawnStone(ItemID.DAWNSTONE).setUnlocalizedName("dawnStone");
         headStaff = new General(ItemID.HEADSTAFF).setUnlocalizedName("headStaff");
         bodyStaff = new General(ItemID.BODYSTAFF).setUnlocalizedName("bodyStaff");
         bottomStaff = new General(ItemID.BOTTOMSTAFF).setUnlocalizedName("bottomStaff");
@@ -39,6 +40,13 @@ public class ModItems
         dawnStaff = new DawnStaff(ItemID.DAWNSTAFF).setUnlocalizedName("dawnStaff");
         dualStaff = new DualStaff(ItemID.DUALSTAFF).setUnlocalizedName("dualStaff");
         timeEssence = new Essence(ItemID.TIMEESSENCE).setUnlocalizedName("timeEssence");
+        
+        //Stones
+        duskStone = new Stone(ItemID.DUSKSTONE, "dusk").setUnlocalizedName("duskStone");
+        dawnStone = new Stone(ItemID.DAWNSTONE, "dawn").setUnlocalizedName("dawnStone");
+        sunStone = new Stone(ItemID.SUNSTONE, "sun").setUnlocalizedName("sunStone");
+        rainStone = new Stone(ItemID.RAINSTONE, "rain").setUnlocalizedName("rainStone");
+        thunderStone = new Stone(ItemID.THUNDERSTONE, "thunder").setUnlocalizedName("thunderStone");
 
         LanguageRegistry.addName(duskPowder, "Dusk Powder");
         LanguageRegistry.addName(duskFragment, "Dusk Fragment");
@@ -54,5 +62,8 @@ public class ModItems
         LanguageRegistry.addName(dawnStaff, "Dawn Staff");
         LanguageRegistry.addName(dualStaff, "Time Staff");
         LanguageRegistry.addName(timeEssence, "Essence of Time");
+        LanguageRegistry.addName(sunStone, "Sun Stone");
+        LanguageRegistry.addName(rainStone, "Rain Stone");
+        LanguageRegistry.addName(thunderStone, "Thunder Stone");
     }
 }

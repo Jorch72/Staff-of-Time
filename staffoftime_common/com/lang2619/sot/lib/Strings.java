@@ -19,4 +19,7 @@ public class Strings
     public static final String DAWN_STAFF = "dawnStaff";
     public static final String DUAL_STAFF = "dualStaff";
     public static final String TIME_ESSENCE = "timeEssence";
+    public static final String SUN_STONE = "sunStone";
+    public static final String RAIN_STONE = "rainStone";
+    public static final String THUNDER_STONE = "thunderStone";
 }

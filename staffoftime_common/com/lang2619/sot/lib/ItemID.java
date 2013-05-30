@@ -3,6 +3,7 @@ package com.lang2619.sot.lib;
 public class ItemID
 {
     
+    
     //default
     public static int DUSKPOWDER_DEFAULT = 27003;
     public static int DUSKFRAGMENT_DEFAULT = 27004;
@@ -18,6 +19,9 @@ public class ItemID
     public static int DAWNSTAFF_DEFAULT = 27014;
     public static int DUALSTAFF_DEFAULT = 27015;
     public static int TIMEESSENCE_DEFAULT = 27016;
+    public static int SUNSTONE_DEFAULT = 27017;
+    public static int RAINSTONE_DEFAULT = 27018;
+    public static int THUNDERSTONE_DEFAULT = 27019;
     //current
     public static int DUSKPOWDER;
     public static int DUSKFRAGMENT;
@@ -33,4 +37,7 @@ public class ItemID
     public static int DAWNSTAFF;
     public static int DUALSTAFF;
     public static int TIMEESSENCE;
+    public static int SUNSTONE;
+    public static int RAINSTONE;
+    public static int THUNDERSTONE;
 }

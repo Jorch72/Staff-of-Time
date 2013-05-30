@@ -45,7 +45,10 @@ public class ConfigurationHandler
             ItemID.DAWNSTAFF = configuration.getItem(Strings.DAWN_STAFF, ItemID.DAWNSTAFF_DEFAULT).getInt(ItemID.DAWNSTAFF_DEFAULT);
             ItemID.DUALSTAFF = configuration.getItem(Strings.DUAL_STAFF, ItemID.DUALSTAFF_DEFAULT).getInt(ItemID.DUALSTAFF_DEFAULT);
             ItemID.TIMEESSENCE = configuration.getItem(Strings.TIME_ESSENCE, ItemID.TIMEESSENCE_DEFAULT).getInt(ItemID.TIMEESSENCE_DEFAULT);
-
+            ItemID.SUNSTONE = configuration.getItem(Strings.SUN_STONE, ItemID.SUNSTONE_DEFAULT).getInt(ItemID.SUNSTONE_DEFAULT);
+            ItemID.RAINSTONE = configuration.getItem(Strings.RAIN_STONE, ItemID.RAINSTONE_DEFAULT).getInt(ItemID.RAINSTONE_DEFAULT);
+            ItemID.THUNDERSTONE = configuration.getItem(Strings.THUNDER_STONE, ItemID.THUNDERSTONE_DEFAULT).getInt(ItemID.THUNDERSTONE_DEFAULT);
+            
         }
         catch(Exception e){
             FMLLog.log(Level.SEVERE, e, Reference.MOD_NAME + " has had a problem loading its configuration");
