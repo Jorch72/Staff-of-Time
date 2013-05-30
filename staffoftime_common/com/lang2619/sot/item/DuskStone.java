@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.lang2619.sot.handlers.ConfigurationHandler;
+import com.lang2619.sot.handlers.Time;
 import com.lang2619.sot.lib.Utils;
 
 public class DuskStone extends ItemGeneral
@@ -21,10 +22,12 @@ public class DuskStone extends ItemGeneral
     {
         if(par3EntityPlayer.capabilities.isCreativeMode)
         {
+            Time.processCommand(par3EntityPlayer, "dusk");
             return par1ItemStack;
         }
         else
         {
+            Time.processCommand(par3EntityPlayer, "dusk");
             --par1ItemStack.stackSize;
             return par1ItemStack;
         }

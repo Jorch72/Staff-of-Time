@@ -2,12 +2,13 @@ package com.lang2619.sot.item;
 
 import java.util.List;
 
-import com.lang2619.sot.handlers.ConfigurationHandler;
-import com.lang2619.sot.lib.Utils;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import com.lang2619.sot.handlers.ConfigurationHandler;
+import com.lang2619.sot.handlers.Time;
+import com.lang2619.sot.lib.Utils;
 
 public class DawnStone extends ItemGeneral
 {
@@ -16,17 +17,25 @@ public class DawnStone extends ItemGeneral
     {
         super(id);
     }
-    
+
+    public int getRequiredPermissionLevel()
+    {
+        return 0;
+    }
+
     public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
         if(par3EntityPlayer.capabilities.isCreativeMode)
         {
+            Time.processCommand(par3EntityPlayer, "dawn");
             return par1ItemStack;
         }
         else
         {
             --par1ItemStack.stackSize;
+            Time.processCommand(par3EntityPlayer, "dawn");
             return par1ItemStack;
+
         }
     }
 
