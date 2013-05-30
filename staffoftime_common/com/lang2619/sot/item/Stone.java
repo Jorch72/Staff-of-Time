@@ -2,17 +2,21 @@ package com.lang2619.sot.item;
 
 import java.util.List;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.lang2619.sot.handlers.ConfigurationHandler;
 import com.lang2619.sot.handlers.Time;
+import com.lang2619.sot.handlers.Weather;
 import com.lang2619.sot.lib.Utils;
 
 public class Stone extends ItemGeneral
 {
     public final String stoneName;
+    public int cooldownTime = 0;
+    public int cooldownWeather = 0;
 
     public Stone(int id, String par2str)
     {
@@ -37,22 +41,100 @@ public class Stone extends ItemGeneral
             {
                 Time.processCommand(par3EntityPlayer, "dusk");   
             }
+            if(stoneName == "sun")
+            {
+                Weather.processCommand(par3EntityPlayer, "sun");
+            }
+            if(stoneName == "rain")
+            {
+                Weather.processCommand(par3EntityPlayer, "rain");
+            }
+            if(stoneName == "thunder")
+            {
+                Weather.processCommand(par3EntityPlayer, "thunder");
+            }
             return par1ItemStack;
         }
         else
         {
-            --par1ItemStack.stackSize;
+            
             if(stoneName == "dawn")
             {
-                Time.processCommand(par3EntityPlayer, "dawn");
+                if(cooldownTime <= 0)
+                {
+                    Time.processCommand(par3EntityPlayer, "dawn");
+                    cooldownTime = 12000;
+                    --par1ItemStack.stackSize;
+                }
+                else
+                {
+                    par3EntityPlayer.addChatMessage("You can't use this Stone yet, wait for "+(cooldownTime/20)+" seconds.");
+                }
             }
             if(stoneName == "dusk")
             {
-                Time.processCommand(par3EntityPlayer, "dusk");   
+                if(cooldownTime <= 0)
+                {
+                    Time.processCommand(par3EntityPlayer, "dusk");
+                    cooldownTime = 12000;
+                    --par1ItemStack.stackSize;
+                }
+                else
+                {
+                    par3EntityPlayer.addChatMessage("You can't use this Stone yet, wait for "+(cooldownTime/20)+" seconds.");
+                }
             }
+            if(stoneName == "sun")
+            {
+                if(cooldownWeather <= 0)
+                {
+
+                    Weather.processCommand(par3EntityPlayer, "sun");
+                    cooldownWeather = 12000;
+                    --par1ItemStack.stackSize;
+                }
+                else
+                {
+                    par3EntityPlayer.addChatMessage("You can't use this Stone yet, wait for "+(cooldownWeather/20)+" seconds.");
+                }
+            }
+            if(stoneName == "rain")
+            {
+                if(cooldownWeather <= 0)
+                {
+
+                    Weather.processCommand(par3EntityPlayer, "rain");
+                    cooldownWeather = 12000;
+                    --par1ItemStack.stackSize;
+                }
+                else
+                {
+                    par3EntityPlayer.addChatMessage("You can't use this Stone yet, wait for "+(cooldownWeather/20)+" seconds.");
+                }
+            }
+            if(stoneName == "thunder")
+            {
+                if(cooldownWeather <= 0)
+                {
+                    Weather.processCommand(par3EntityPlayer, "thunder");
+                    cooldownWeather = 12000;
+                    --par1ItemStack.stackSize;
+                }
+                else
+                {
+                    par3EntityPlayer.addChatMessage("You can't use this Stone yet, wait for "+(cooldownWeather/20)+" seconds.");
+                }
+            }
+
             return par1ItemStack;
 
         }
+    }
+
+    public void onUpdate(ItemStack par1ItemStack, World par2World, Entity par3Entity, int par4, boolean par5) 
+    {
+        cooldownTime--;
+        cooldownWeather--;
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
