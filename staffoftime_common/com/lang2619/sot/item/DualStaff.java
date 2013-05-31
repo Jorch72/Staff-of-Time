@@ -18,6 +18,8 @@ import com.lang2619.sot.lib.Utils;
 public class DualStaff extends ItemGeneral
 {
 
+    //To-DO Mode changing!
+    
     public static int staffMode;
     public String staffModeString;
     boolean modeChange;
