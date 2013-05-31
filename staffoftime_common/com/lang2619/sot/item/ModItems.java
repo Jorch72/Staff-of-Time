@@ -38,7 +38,7 @@ public class ModItems
         neutralStaff = new Staff(ItemID.NEUTRALSTAFF).setUnlocalizedName("neutralStaff");
         duskStaff = new DuskStaff(ItemID.DUSKSTAFF).setUnlocalizedName("duskStaff");
         dawnStaff = new DawnStaff(ItemID.DAWNSTAFF).setUnlocalizedName("dawnStaff");
-        dualStaff = new DualStaff(ItemID.DUALSTAFF).setUnlocalizedName("dualStaff");
+        dualStaff = new DualStaff(ItemID.DUALSTAFF, 0).setUnlocalizedName("dualStaff");
         timeEssence = new Essence(ItemID.TIMEESSENCE).setUnlocalizedName("timeEssence");
         
         //Stones

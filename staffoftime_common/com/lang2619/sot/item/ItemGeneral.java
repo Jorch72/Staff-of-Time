@@ -3,19 +3,23 @@ package com.lang2619.sot.item;
 import java.util.List;
 
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.lang2619.sot.StaffofTime;
 import com.lang2619.sot.lib.Reference;
 
 public class ItemGeneral extends Item
 {
+    
+    
+    private int maxDamage = 0;
+
     public ItemGeneral(int id)
     {
         super(id);
-        this.setCreativeTab(CreativeTabs.tabMaterials);
+        this.setCreativeTab(StaffofTime.tabTut);
     }
 
     public void registerIcons(IconRegister par1IconRegister)
@@ -26,6 +30,11 @@ public class ItemGeneral extends Item
     public int getItemStackLimit()
     {
         return this.maxStackSize;
+    }
+    
+    public int getMaxDamage()
+    {
+        return this.maxDamage;
     }
 
     @SuppressWarnings("rawtypes")

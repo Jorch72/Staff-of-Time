@@ -78,6 +78,16 @@ public class ConfigurationHandler
         }
         return false;
     }
+    
+    public static boolean changeMode()
+    {
+        if(FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+            if(Keyboard.isKeyDown(Keyboard.KEY_M)){
+                return true;
+            }
+        }
+        return false;
+    }
 
     public static String additionalInfoInstructions()
     {

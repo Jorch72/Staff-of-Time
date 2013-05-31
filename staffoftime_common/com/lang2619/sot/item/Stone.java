@@ -145,19 +145,19 @@ public class Stone extends ItemGeneral
         {
             if(stoneName == "dawn")
             {
-                String message = "Turns time to Dawn.";
+                String message = "Turns time to Day.";
                 message = Utils.wrapMultipleFormatTags(message, Utils.FormatCodes.Grey, Utils.FormatCodes.Italic);
                 par3List.add(message);
             }
             if(stoneName == "dusk")
             {
-                String message = "Turns time to Dusk.";
+                String message = "Turns time to Night.";
                 message = Utils.wrapMultipleFormatTags(message, Utils.FormatCodes.Grey, Utils.FormatCodes.Italic);
                 par3List.add(message);
             }
             if(stoneName == "sun")
             {
-                String message = "Turns weather to Sunny.";
+                String message = "Turns weather to Clear.";
                 message = Utils.wrapMultipleFormatTags(message, Utils.FormatCodes.Grey, Utils.FormatCodes.Italic);
                 par3List.add(message);
             }
