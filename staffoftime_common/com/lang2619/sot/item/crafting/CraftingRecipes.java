@@ -44,7 +44,7 @@ public class CraftingRecipes
        
        //Body Staff
        GameRegistry.addRecipe(new ItemStack(ModItems.bodyStaff), new Object[]{
-           "  I", " I ", "I  ", 'I', Item.ingotIron
+           " I ", " II", "I  ", 'I', Item.ingotIron
        });
        
        //Bottom Staff

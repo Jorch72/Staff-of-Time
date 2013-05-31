@@ -42,24 +42,24 @@ public class ModItems
         timeEssence = new Essence(ItemID.TIMEESSENCE).setUnlocalizedName("timeEssence");
         
         //Stones
-        duskStone = new Stone(ItemID.DUSKSTONE, "dusk").setUnlocalizedName("duskStone");
-        dawnStone = new Stone(ItemID.DAWNSTONE, "dawn").setUnlocalizedName("dawnStone");
+        duskStone = new Stone(ItemID.DUSKSTONE, "dusk").setFull3D().setUnlocalizedName("duskStone");
+        dawnStone = new Stone(ItemID.DAWNSTONE, "dawn").setFull3D().setUnlocalizedName("dawnStone");
         sunStone = new Stone(ItemID.SUNSTONE, "sun").setUnlocalizedName("sunStone");
         rainStone = new Stone(ItemID.RAINSTONE, "rain").setUnlocalizedName("rainStone");
         thunderStone = new Stone(ItemID.THUNDERSTONE, "thunder").setUnlocalizedName("thunderStone");
 
-        LanguageRegistry.addName(duskPowder, "Dusk Powder");
-        LanguageRegistry.addName(duskFragment, "Dusk Fragment");
-        LanguageRegistry.addName(duskStone, "Dusk Stone");
-        LanguageRegistry.addName(dawnPowder, "Dawn Powder");
-        LanguageRegistry.addName(dawnFragment, "Dawn Fragment");
-        LanguageRegistry.addName(dawnStone, "Dawn Stone");
+        LanguageRegistry.addName(duskPowder, "Moon Powder");
+        LanguageRegistry.addName(duskFragment, "Moon Fragment");
+        LanguageRegistry.addName(duskStone, "Moon Stone");
+        LanguageRegistry.addName(dawnPowder, "Sun Powder");
+        LanguageRegistry.addName(dawnFragment, "Sun Fragment");
+        LanguageRegistry.addName(dawnStone, "Sun Stone");
         LanguageRegistry.addName(headStaff, "Head Staff");
         LanguageRegistry.addName(bodyStaff, "Body Staff");
         LanguageRegistry.addName(bottomStaff, "Bottom Staff");
         LanguageRegistry.addName(neutralStaff, "Neutral Staff");
-        LanguageRegistry.addName(duskStaff, "Dusk Staff");
-        LanguageRegistry.addName(dawnStaff, "Dawn Staff");
+        LanguageRegistry.addName(duskStaff, "Moon Staff");
+        LanguageRegistry.addName(dawnStaff, "Sun Staff");
         LanguageRegistry.addName(dualStaff, "Time Staff");
         LanguageRegistry.addName(timeEssence, "Essence of Time");
         LanguageRegistry.addName(sunStone, "Sun Stone");
