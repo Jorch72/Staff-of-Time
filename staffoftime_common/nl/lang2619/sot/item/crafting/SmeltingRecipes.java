@@ -1,9 +1,9 @@
-package com.lang2619.sot.item.crafting;
+package nl.lang2619.sot.item.crafting;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import nl.lang2619.sot.item.ModItems;
 
-import com.lang2619.sot.item.ModItems;
 
 public class SmeltingRecipes
 {

@@ -1,18 +1,18 @@
-package com.lang2619.sot;
+package nl.lang2619.sot;
 
 import java.io.File;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-
-import com.lang2619.sot.handlers.ConfigurationHandler;
-import com.lang2619.sot.item.ModItems;
-import com.lang2619.sot.item.crafting.CraftingRecipes;
-import com.lang2619.sot.item.crafting.SmeltingRecipes;
-import com.lang2619.sot.lib.Reference;
+import nl.lang2619.sot.handlers.ConfigurationHandler;
+import nl.lang2619.sot.item.ModItems;
+import nl.lang2619.sot.item.crafting.CraftingRecipes;
+import nl.lang2619.sot.item.crafting.SmeltingRecipes;
+import nl.lang2619.sot.lib.Reference;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -25,14 +25,23 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class StaffofTime
 {
+    @Instance(Reference.MOD_ID)
+    public static StaffofTime instance;
+
     @PreInit
     public void preInit(FMLPreInitializationEvent event)
     {
-        ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsoluteFile() + File.separator + "Staff of Time" + ".cfg"));
-        //CreativeTab.init();
+        ConfigurationHandler
+                .init(new File(event.getModConfigurationDirectory()
+                        .getAbsoluteFile()
+                        + File.separator
+                        + "Staff of Time"
+                        + ".cfg"));
+        // CreativeTab.init();
         ModItems.init();
-        LanguageRegistry.instance().addStringLocalization("itemGroup.tabTut", "en_US", "Staff of Time");
-        
+        LanguageRegistry.instance().addStringLocalization("itemGroup.tabTut",
+                "en_US", "Staff of Time");
+
     }
 
     @Init
@@ -48,12 +57,12 @@ public class StaffofTime
     {
 
     }
-    
+
     public static CreativeTabs tabTut = new CreativeTabs("tabTut")
     {
         public ItemStack getIconItemStack()
-    {
+        {
             return new ItemStack(ModItems.dawnStone, 1, 0);
-    }
+        }
     };
 }

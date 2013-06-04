@@ -1,4 +1,4 @@
-package com.lang2619.sot.item;
+package nl.lang2619.sot.item;
 
 public class Staff extends ItemGeneral
 {

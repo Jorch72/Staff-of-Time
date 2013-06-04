@@ -1,9 +1,9 @@
-package com.lang2619.sot.item.crafting;
+package nl.lang2619.sot.item.crafting;
 
-import com.lang2619.sot.item.ModItems;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import nl.lang2619.sot.item.ModItems;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

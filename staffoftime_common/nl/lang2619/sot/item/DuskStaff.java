@@ -1,4 +1,4 @@
-package com.lang2619.sot.item;
+package nl.lang2619.sot.item;
 
 import java.util.List;
 
@@ -10,10 +10,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
+import nl.lang2619.sot.handlers.ConfigurationHandler;
+import nl.lang2619.sot.lib.Utils;
+import nl.lang2619.sot.command.ClientUtils;
 
-import com.lang2619.sot.handlers.ConfigurationHandler;
-import com.lang2619.sot.handlers.Time;
-import com.lang2619.sot.lib.Utils;
 
 public class DuskStaff extends ItemGeneral
 {
@@ -82,14 +82,15 @@ public class DuskStaff extends ItemGeneral
 
         if (par3EntityPlayer.capabilities.isCreativeMode)
         {
-            Time.processCommand(par3EntityPlayer, "dusk");
+            //Time.processCommand(par3EntityPlayer, "dusk");
+            ClientUtils.setTime(12500, par2World);
         }
         if(!par3EntityPlayer.capabilities.isCreativeMode && par3EntityPlayer.inventory.hasItem(ModItems.duskFragment.itemID))
         {
             if(cooldownTime <= 0 && par3EntityPlayer.inventory.hasItem(ModItems.duskFragment.itemID))
             {
                 par3EntityPlayer.inventory.consumeInventoryItem(ModItems.duskFragment.itemID);
-                Time.processCommand(par3EntityPlayer, "dusk");
+                ClientUtils.setTime(12500, par2World);
                 par1ItemStack.damageItem(1, par3EntityPlayer);
                 cooldownTime = 6000;
                 par1ItemStack.damageItem(1, par3EntityPlayer);

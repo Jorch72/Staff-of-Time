@@ -1,4 +1,4 @@
-package com.lang2619.sot.item;
+package nl.lang2619.sot.item;
 
 import java.util.List;
 
@@ -10,10 +10,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
+import nl.lang2619.sot.command.ClientUtils;
+import nl.lang2619.sot.handlers.ConfigurationHandler;
+import nl.lang2619.sot.lib.Utils;
 
-import com.lang2619.sot.handlers.ConfigurationHandler;
-import com.lang2619.sot.handlers.Time;
-import com.lang2619.sot.lib.Utils;
 
 public class DualStaff extends ItemGeneral
 {
@@ -120,11 +120,11 @@ public class DualStaff extends ItemGeneral
 
             if(staffMode == 0)
             {
-                Time.processCommand(par3EntityPlayer, "dusk");
+                ClientUtils.setTime(12500, par2World);
             }
             if(staffMode == 1)
             {
-                Time.processCommand(par3EntityPlayer, "dawn");
+                ClientUtils.setTime(0, par2World);
             }
 
         }
@@ -135,7 +135,7 @@ public class DualStaff extends ItemGeneral
                 if(staffMode == 0 && par3EntityPlayer.inventory.hasItem(ModItems.duskFragment.itemID))
                 {
                     par3EntityPlayer.inventory.consumeInventoryItem(ModItems.duskFragment.itemID);
-                    Time.processCommand(par3EntityPlayer, "dusk");
+                    ClientUtils.setTime(12500, par2World);
                     par1ItemStack.damageItem(1, par3EntityPlayer);
                     cooldownTime = 6000;
                     par1ItemStack.damageItem(1, par3EntityPlayer);
@@ -143,7 +143,7 @@ public class DualStaff extends ItemGeneral
                 if(staffMode == 1 && par3EntityPlayer.inventory.hasItem(ModItems.dawnFragment.itemID))
                 {
                     par3EntityPlayer.inventory.consumeInventoryItem(ModItems.dawnFragment.itemID);
-                    Time.processCommand(par3EntityPlayer, "dawn");
+                    ClientUtils.setTime(0, par2World);
                     par1ItemStack.damageItem(1, par3EntityPlayer);
                     cooldownTime = 6000;
                     par1ItemStack.damageItem(1, par3EntityPlayer);

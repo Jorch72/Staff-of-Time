@@ -1,4 +1,4 @@
-package com.lang2619.sot.lib;
+package nl.lang2619.sot.lib;
 
 public class Reference
 {
