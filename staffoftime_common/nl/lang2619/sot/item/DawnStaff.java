@@ -82,14 +82,14 @@ public class DawnStaff extends ItemGeneral
 
         if (par3EntityPlayer.capabilities.isCreativeMode)
         {
-            ClientUtils.setTime(0, par2World);
+            ClientUtils.changeTime(0, par2World);
         }
         if(!par3EntityPlayer.capabilities.isCreativeMode && par3EntityPlayer.inventory.hasItem(ModItems.dawnFragment.itemID))
         {
             if(cooldownTime <= 0 && par3EntityPlayer.inventory.hasItem(ModItems.dawnFragment.itemID))
             {
                 par3EntityPlayer.inventory.consumeInventoryItem(ModItems.dawnFragment.itemID);
-                ClientUtils.setTime(0, par2World);
+                ClientUtils.changeTime(0, par2World);
                 par1ItemStack.damageItem(1, par3EntityPlayer);
                 cooldownTime = 6000;
                 par1ItemStack.damageItem(1, par3EntityPlayer);

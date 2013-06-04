@@ -83,14 +83,14 @@ public class DuskStaff extends ItemGeneral
         if (par3EntityPlayer.capabilities.isCreativeMode)
         {
             //Time.processCommand(par3EntityPlayer, "dusk");
-            ClientUtils.setTime(12500, par2World);
+            ClientUtils.changeTime(12500, par2World);
         }
         if(!par3EntityPlayer.capabilities.isCreativeMode && par3EntityPlayer.inventory.hasItem(ModItems.duskFragment.itemID))
         {
             if(cooldownTime <= 0 && par3EntityPlayer.inventory.hasItem(ModItems.duskFragment.itemID))
             {
                 par3EntityPlayer.inventory.consumeInventoryItem(ModItems.duskFragment.itemID);
-                ClientUtils.setTime(12500, par2World);
+                ClientUtils.changeTime(12500, par2World);
                 par1ItemStack.damageItem(1, par3EntityPlayer);
                 cooldownTime = 6000;
                 par1ItemStack.damageItem(1, par3EntityPlayer);

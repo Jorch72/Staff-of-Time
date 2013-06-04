@@ -63,7 +63,7 @@ public class Stone extends ItemGeneral
             {
                 if(cooldownTime <= 0)
                 {
-                    ClientUtils.setTime(0, par2World);
+                    ClientUtils.changeTime(0, par2World);
                     cooldownTime = 12000;
                     --par1ItemStack.stackSize;
                 }
@@ -76,7 +76,7 @@ public class Stone extends ItemGeneral
             {
                 if(cooldownTime <= 0)
                 {
-                    ClientUtils.setTime(12500, par2World);
+                    ClientUtils.changeTime(12500, par2World);
                     cooldownTime = 12000;
                     --par1ItemStack.stackSize;
                 }

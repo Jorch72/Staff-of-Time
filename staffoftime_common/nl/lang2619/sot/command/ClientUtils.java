@@ -18,4 +18,12 @@ public class ClientUtils extends ServerUtils
     {
         mc().theWorld.getWorldInfo().setWorldTime(l);
     }
+    
+    public static void changeTime(int time)
+    {
+        long day = (getTime() / 24000L) * 24000L;
+        long newTime = day + 24000L + time * 1000;
+        setTime(newTime);
+        
+    }
 }
