@@ -120,7 +120,7 @@ public class DualStaff extends ItemGeneral
 
             if(staffMode == 0)
             {
-                ClientUtils.changeTime(12500, par2World);
+                ClientUtils.changeTime(14, par2World);
             }
             if(staffMode == 1)
             {
@@ -135,7 +135,7 @@ public class DualStaff extends ItemGeneral
                 if(staffMode == 0 && par3EntityPlayer.inventory.hasItem(ModItems.duskFragment.itemID))
                 {
                     par3EntityPlayer.inventory.consumeInventoryItem(ModItems.duskFragment.itemID);
-                    ClientUtils.changeTime(12500, par2World);
+                    ClientUtils.changeTime(14, par2World);
                     par1ItemStack.damageItem(1, par3EntityPlayer);
                     cooldownTime = 6000;
                     par1ItemStack.damageItem(1, par3EntityPlayer);
